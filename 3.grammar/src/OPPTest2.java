@@ -1,11 +1,11 @@
 class Animal {
     private String name;
 
-    public Animal(String name) {
+    public Animal(String name) {//含参构造器
         this.name = name;
     }
 
-    public Animal() {
+    public Animal() {//无参构造器
         this.name = "未知动物";
     }
 
