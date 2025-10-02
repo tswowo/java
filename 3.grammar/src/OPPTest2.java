@@ -30,6 +30,10 @@ class cat extends Animal {
     public void catchMouse() {
         System.out.println("猫抓老鼠");
     }
+    @Override
+    public void eat(){
+        System.out.println("猫吃猫粮");
+    }
 }
 
 class PersianCat extends cat {
@@ -39,6 +43,11 @@ class PersianCat extends cat {
 
     public void sleep() {
         System.out.println("波斯猫睡觉");
+    }
+
+    @Override
+    public void eat(){
+        System.out.println("波斯猫吃酱菜罐头");
     }
 }
 
