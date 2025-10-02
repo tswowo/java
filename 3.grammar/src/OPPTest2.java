@@ -42,7 +42,7 @@ class PersianCat extends cat {
     }
 
     public void sleep() {
-        System.out.println("波斯猫睡觉");
+        System.out.println("波斯猫睡觉了");
     }
 
     @Override
