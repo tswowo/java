@@ -23,6 +23,9 @@ class cat extends Animal {
         //如果没有显式调用super，编译器会自动添加super构造语句，并调用该父类的无参构造器（此时要求父类必须有无参构造器）
         this.age = age;
     }
+    public cat(){
+        //这里什么都没有，但其实已经调用了super()即Animal()
+    }
 
     public void catchMouse() {
         System.out.println("猫抓老鼠");
