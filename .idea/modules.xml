@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/3.grammar/3.grammar.iml" filepath="$PROJECT_DIR$/3.grammar/3.grammar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1.JavaSe/1.JavaSe.iml" filepath="$PROJECT_DIR$/1.JavaSe/1.JavaSe.iml" />
       <module fileurl="file://$PROJECT_DIR$/Javastudy.iml" filepath="$PROJECT_DIR$/Javastudy.iml" />
     </modules>
   </component>
