@@ -1,4 +1,4 @@
-package InnerClass;
+package innerClass;
 
 class Outer {
     private int member;

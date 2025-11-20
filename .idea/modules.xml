@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/1.JavaSe/1.JavaSe.iml" filepath="$PROJECT_DIR$/1.JavaSe/1.JavaSe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/1.JavaSe1/1.JavaSe1.iml" filepath="$PROJECT_DIR$/1.JavaSe1/1.JavaSe1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/2.JavaSe2/2.JavaSe2.iml" filepath="$PROJECT_DIR$/2.JavaSe2/2.JavaSe2.iml" />
       <module fileurl="file://$PROJECT_DIR$/Javastudy.iml" filepath="$PROJECT_DIR$/Javastudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/heima-employee-sys/heima-employee-sys.iml" filepath="$PROJECT_DIR$/heima-employee-sys/heima-employee-sys.iml" />
     </modules>
   </component>
 </project>

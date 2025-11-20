@@ -1,4 +1,4 @@
-package InnerClass;
+package innerClass;
 
 class People1{
     private int heartBeat=100;

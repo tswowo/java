@@ -1,4 +1,4 @@
-package InnerClass;
+package innerClass;
 
 import java.util.Arrays;
 import java.util.Scanner;

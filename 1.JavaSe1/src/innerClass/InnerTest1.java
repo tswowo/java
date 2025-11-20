@@ -1,4 +1,4 @@
-package InnerClass;
+package innerClass;
 
 class Test1{
     static private int id;

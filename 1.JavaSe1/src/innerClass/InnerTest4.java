@@ -1,4 +1,4 @@
-package InnerClass;
+package innerClass;
 
 class People2 {
     void swim() {
