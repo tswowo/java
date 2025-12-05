@@ -1,4 +1,4 @@
-package IOFile;
+package IOfile;
 
 import java.io.File;
 import java.io.IOException;

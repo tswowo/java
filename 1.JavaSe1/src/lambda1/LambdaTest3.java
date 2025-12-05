@@ -1,4 +1,4 @@
-package Lambda1;
+package lambda1;
 
 import java.util.Arrays;
 

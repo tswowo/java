@@ -1,4 +1,4 @@
-package imgView1;
+package imgview1;
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;

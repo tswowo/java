@@ -1,4 +1,4 @@
-package cmdArgs1;
+package cmdargs1;
 
 public class CmdArgsTest {
     public static void main(String[] args){

@@ -1,7 +1,6 @@
-package IOFile;
+package IOfile;
 
 import java.io.*;
-import java.util.Collections;
 
 public class CopyFile1 {
     public static void main(String[] args) {
