@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.DOM对象3</title>
+</head>
+<body>
+<div id="纯色">
+    <div id="方块1" style="background-color: red; width: 100px; height: 100px;overflow: auto">
+        方块1
+    </div>
+    <div id="方块2" style="background-color: blue; width: 100px; height: 100px;overflow: auto">
+        方块2
+    </div>
+    <button onclick="exchangeColor()">交换颜色</button>
+    <button onclick="addWord()">添加文字</button>
+</div>
+</body>
+
+<script>
+    function exchangeColor() {
+        let color1 = document.getElementById("方块1");
+        let color2 = document.getElementById("方块2");
+        let temp = color1.style.backgroundColor;
+        color1.style.backgroundColor = color2.style.backgroundColor;
+        color2.style.backgroundColor = temp;
+    }
+
+    function addWord() {
+        // document.getElementById("方块1").innerHTML+= "&nbsp greeting!";
+        // Array.from(divs).forEach(function (div) {
+        //     div.innerHTML += "&nbsp;greeting!";
+        // });
+        addWordHelper(0, document.body);
+    }
+
+    function addWordHelper(cnt, theDiv){
+        if(cnt>2)return null;
+        let divs = theDiv.getElementsByTagName("div");
+        Array.from(divs).forEach(function (d) {
+            d.innerHTML += "&nbsp;greeting!";
+            addWordHelper(cnt+1, d);
+        });
+    }
+</script>
+</html>

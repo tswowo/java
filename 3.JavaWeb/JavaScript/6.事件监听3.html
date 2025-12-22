@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>6.事件监听3</title>
+</head>
+<body>
+<div id="div1" style="background-color: black; width: 100px; height: 100px;" tabindex="0">
+</div>
+<button onclick="setColor('red')">red</button>
+<button onclick="setColor('green')">green</button>
+<button onclick="setColor('blue')">blue</button>
+
+<br>
+<input type="text" id="txt1" value="" onfocus="onFocus()" onblur="onBlur()">
+
+<br>
+<form>
+    <input type="checkbox" name="color" value="red">Red
+    <input type="checkbox" name="color" value="green">Green
+    <input type="checkbox" name="color" value="blue">Blue
+    <br>
+    <botton onclick="selectAll()">全选</botton>
+    <botton onclick="reverseSelect()">反选</botton>
+    <botton onclick="clearAll()">清空</botton>
+</form>
+</body>
+<script>
+    function setColor(color) {
+        document.getElementById("div1").style.backgroundColor = color;
+    }
+
+    function onFocus() {
+        // 获取输入框元素
+        const input = document.getElementById("txt1");
+        // 将输入框内容转换为大写
+        input.value = input.value.toUpperCase();
+    }
+
+    function onBlur() {
+        // 获取输入框元素
+        const input = document.getElementById("txt1");
+        // 将输入框内容转换为小写
+        input.value = input.value.toLowerCase();
+    }
+
+    function selectAll() {
+        // 获取所有复选框元素
+        const checkboxes = document.getElementsByName("color");
+        // 遍历复选框元素
+        for (let i = 0; i < checkboxes.length; i++) {
+            // 设置复选框选中
+            checkboxes[i].checked = true;
+        }
+    }
+
+    function reverseSelect() {
+        // 获取所有复选框元素
+        const checkboxes = document.getElementsByName("color");
+        // 遍历复选框元素
+        for (let i = 0; i < checkboxes.length; i++) {
+            // 获取当前复选框选中状态
+            const checked = checkboxes[i].checked;
+            // 设置当前复选框选中状态为反选
+            checkboxes[i].checked = !checked;
+        }
+    }
+
+    function clearAll() {
+        // 获取所有复选框元素
+        const checkboxes = document.getElementsByName("color");
+        // 遍历复选框元素
+        for (let i = 0; i < checkboxes.length; i++) {
+            // 设置复选框不选中
+            checkboxes[i].checked = false;
+        }
+    }
+
+
+</script>
+</html>

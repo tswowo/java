@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>5.DOM对象1</title>
+</head>
+<body>
+<div>
+    <p id="poem">
+        静夜思<br>
+        李白<br><br>
+        床前明月光，<br>
+        疑是地上霜。<br>
+        举头望明月，<br>
+        低头思故乡。
+    </p>
+    <button onclick="changeColor()">切换颜色</button>
+    <button onclick="changeFontSize()">切换字体大小</button>
+    <button onclick="resetStyle()">重置样式</button>
+    <button onclick="deleteLastLine()">删除最后一行</button>
+</div>
+</body>
+<script>
+    let f1 = function () {
+        console.log(document.body);
+        console.log(document.body.childNodes);
+        console.log(document.body.firstChild);
+        console.log(document.body.lastChild);
+        console.log(document.body.parentNode);
+        console.log(document.body.nextSibling);
+        console.log(document.body.previousSibling);
+        console.log(document.body.nodeType);
+        console.log(document.body.nodeName);
+        console.log(document.body.nodeValue);
+    }
+
+    function f2() {
+        // 方法1：直接使用document.body
+        document.getElementById('poem').style.color = "red";
+    }
+
+    function f3() {
+        document.getElementById('poem').style.color = "blue";
+    }
+
+    // 切换文字颜色
+    function changeColor() {
+        const poem = document.getElementById('poem');
+        const colors = ['black', 'red', 'blue', 'green', 'purple'];
+        const currentColor = window.getComputedStyle(poem).color;
+        // 获取当前颜色在数组中的索引
+        let currentIndex = colors.findIndex(color => {
+            return currentColor.includes(color) ||
+                (color === 'black' && currentColor === 'rgb(0, 0, 0)') ||
+                (color === 'red' && currentColor === 'rgb(255, 0, 0)') ||
+                (color === 'blue' && currentColor === 'rgb(0, 0, 255)') ||
+                (color === 'green' && currentColor === 'rgb(0, 128, 0)') ||
+                (color === 'purple' && currentColor === 'rgb(128, 0, 128)');
+        });
+        let nextIndex = (currentIndex + 1) % colors.length;
+        poem.style.color = colors[nextIndex];
+    }
+
+
+    // 切换字体大小
+    function changeFontSize() {
+        const poem = document.getElementById('poem');
+        const sizes = ['16px', '20px', '24px', '28px', '32px'];
+        const currentSize = window.getComputedStyle(poem).fontSize;
+        let nextIndex = (sizes.indexOf(currentSize) + 1) % sizes.length;
+        if (nextIndex === -1) nextIndex = 0;
+        poem.style.fontSize = sizes[nextIndex];
+    }
+
+    // 重置样式
+    function resetStyle() {
+        const poem = document.getElementById('poem');
+        poem.style.color = 'black';
+        poem.style.fontSize = '16px';
+    }
+
+    function deleteLastLine() {
+        const poem = document.getElementById('poem');
+        const lines = poem.innerHTML.split('<br>');
+        if (lines.length > 1) {
+            lines.pop(); // 删除最后一行
+            poem.innerHTML = lines.join('<br>');
+        }
+    }
+
+    // 初始化
+    document.addEventListener('DOMContentLoaded', function () {
+        f1();
+        f2();
+        f3();
+    });
+</script>
+</html>
